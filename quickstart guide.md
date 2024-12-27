@@ -1,10 +1,27 @@
 # Vue.js
 ## quickstart guide
-There are lots of different version of Vue. There are a small difference to install vue-cli and create vue project between different version of vue-cli.
+There are lots of different ways to run .vue or vue project.
 
-Here, I will discuss this topic for two different version.
+Here, I will only discuss three ways:
 
-### currently latest stable version of vue-cli
++ embed vue plugin (development version) in `.html` file.
++ create a vue project with currently latest stable version of vue-cli.
++ create a vue project with currently latest version of Vue + Vite.
+
+### embed vue plugin (development version) in `.html` file
+To embed vue plugin (development version) in `.html` file, one just have to add `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` in `<head>` tag
+
+As follows.
+
+```
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+```
+
+stated more in [`Vue.js 的基礎使用與雙花括號表達式`](https://ithelp.ithome.com.tw/articles/10239374)
+
+### create a vue project with currently latest stable version of vue-cli
 > [!WARNING]
 > Here is the guide for currently latest stable version, the approach may probably change in the future release, for more details, see [Vue-cli (official docs)](https://cli.vuejs.org/)
 
@@ -100,6 +117,16 @@ Before modifying the code of vue project, you have to know
 
 + the hierarcy of project
 + how the server runs the code.
+
+We will discuss these topic with following example.
+
+Let me tell you answer about how to modifying the code vue project.
+
+We have to modify template in `../src/App.vue` and template in `../src/component/HelloWorld.vue`. 
+
+Why? 
+
+Let me explain with following example.
 
 ##### example
 Take my project named `app-project` for example.
@@ -339,7 +366,7 @@ I summarize the execution of an server of vue project into several diagrams.
 [`workflow 1 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%201%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
 
 [`workflow 2 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%202%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
-### currently latest version of Vue + Vite
+### create a vue project with currently latest version of Vue + Vite
 
 > [!NOTE]
 > Here is the guide for currently latest version (NOT stable) matched with vite, the approach may probably change in the future release, for more details, see [Vue-cli (official docs)](https://cli.vuejs.org/)
@@ -358,8 +385,6 @@ npm create vue@latest
 
 ##### demo
 See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
-
-#### modify the code of vue project
 
 #### reference
 ##### guide reference
