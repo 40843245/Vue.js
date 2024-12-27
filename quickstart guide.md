@@ -20,6 +20,9 @@ npm install @vue/cli
 > [!NOTE]
 > You can install it without npm command, but with other command, for more info, see [installation guide of vue-cli (official docs)](https://cli.vuejs.org/guide/)
 
+##### demo
+See [`How to install vue-cli with npm command in command prompt in Windows 11?`](https://youtu.be/WLC6VHPQqK4)
+
 #### create new project and run the server
 To create a new project, follow these steps.
 
@@ -89,6 +92,9 @@ npm run serve
 
 5. click `http://localhost:8080/` link in command prompt (shown in above figure).
 
+##### demo
+See [`How to create vue project in command prompt in Windows 11?`](https://youtu.be/rrGlRKmhrMM)
+
 #### modify the code of vue project
 Before modifying the code of vue project, you have to know 
 
@@ -148,7 +154,7 @@ npm create vue@latest
 > [!NOTE]
 > You can install it without npm command, but with other command, for more info, see [installation guide of vue-cli (official docs)](https://cli.vuejs.org/guide/)
 
-#### demo
+##### demo
 See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
 
 #### reference
