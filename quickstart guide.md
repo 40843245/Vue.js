@@ -108,7 +108,8 @@ Take my project named `app-project` for example.
 
 The web page will display the result of `../src/main.js`. So let's dive in `../src/main.js`
  
-In my project, I will see the following code snippets in `../src/main.js`.
+###### ../src/main.js
+By default, it should look like this: 
 
 ```
 import { createApp } from 'vue'
@@ -134,9 +135,10 @@ According to the API docs, one can know these infos.
 > 
 > For more details, see [style in `CSS`](https://www.w3schools.com/html/html_css.asp) 
 
+###### `../src/App.vue`
 Next, let's take a glance at definition of `App` in `../src/App.vue`.
 
-You will see these full code in `../src/App.vue`
+By default, it should look like this:
 
 ```
 <template>
@@ -185,10 +187,10 @@ export default {
 </script>
 ```
 
-gives info about the app then export it, including these info  
+define the component  
   
-  - a App's name: says at `name` field. Here is `App`.
-  - used components in this file: says at `components` field. Here `HelloWorld` will be used.
+  - whose name is `App` (we can know it through name field is set to `App` (name: 'App',) between <script> and </script> tag in `../src/App.vue` file).
+  - that uses these components: `HelloWorld` (we can know it through name field is set to `App` (components: {HelloWorld}) between <script> and </script> tag in `../src/App.vue` file) .
 
 + The following code snippets. 
 
@@ -202,19 +204,14 @@ gives info about the app then export it, including these info
 
 Here is a template that the will be used at `createApp(App)` function call in `../src/main.js` file. 
 
-The server will run the template and display output on web page.
+The server will run the above template (we can know it through name field is set to `App` (name: 'App',) between <script> and </script> tag in `../src/App.vue` file) 
+
+and then display output on web page.
 
 > [!NOTE]
 > `<HelloWorld>` component is defined in `./components/HelloWorld.vue`.
 >
 > You will know it at `import HelloWorld from './components/HelloWorld.vue'` between`<script>` and </script> tag in this file. 
-
-> [!TIP]
-> If you are familiar with `ReactJS`, you will quick know that
-> 
-> - `<HelloWorld>` is a component in `<HelloWorld msg="Welcome to Your Vue.js App"/>`
->   
-> - And, the `<HelloWorld>` component is used with argument `msg` that is passed with value `"Welcome to Your Vue.js App"`.
 
 + The following code snippets.
 
@@ -235,13 +232,113 @@ defines the css style named `#app`.
 
 > [!NOTE]
 > It will be used in `<div>` tag at `<div class ="#app">` and which will be mounted in the `mount` method call at `createApp(App).mount('#app')` at `../src/main.js`
->
+
+###### ../src/components/HelloWorld.vue
+Let's dive into `../src/components/HelloWorld.vue`.
+
+By default, it should look like this:
+
+```
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <p>
+      For a guide and recipes on how to configure / customize this project,<br>
+      check out the
+      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+    </p>
+    <h3>Installed CLI Plugins</h3>
+    <ul>
+      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
+      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+    </ul>
+    <h3>Essential Links</h3>
+    <ul>
+      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
+      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
+      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
+      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
+      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
+    </ul>
+    <h3>Ecosystem</h3>
+    <ul>
+      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
+      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
+      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
+      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
+      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
+```
+
+Here's a few code snippets that is worthy to explain it.
+
++ The following code snippets:
+
+```
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+}
+</script>
+```
+
+define the component  
+  
+  - whose name is `HelloWorld`
+  - that has these properties: `msg` with String type.
+
++ The following code snippets:
+
+```
+<template>
+  <div class="hello">
+    <!-- ... -->
+  </div>
+</template>
+```
+
+declares a template 
+   
+   - whose name is `HelloWorld` (we can know it through `name` field is set to `HelloWorld` (`name: 'HelloWorld',) in `../src/components/HelloWorld.vue`.).
 
 ##### summary
 I summarize the execution of an server of vue project into several diagrams.
 
-The server -> `../src/main`
+[`workflow 1 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%201%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
 
+[`workflow 2 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%202%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
 ### currently latest version of Vue + Vite
 
 > [!NOTE]
