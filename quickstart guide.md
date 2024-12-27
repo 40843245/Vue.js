@@ -106,9 +106,9 @@ Take my project named `app-project` for example.
 
 <img width="518" alt="image" src="https://github.com/user-attachments/assets/b90c6117-fa5c-4862-94d5-4520af559e00" />
 
-The web page will display the result of `main.js`. So let's dive in `main.js`
+The web page will display the result of `../src/main.js`. So let's dive in `../src/main.js`
  
-In my project, I will see the following code snippets `main.js`.
+In my project, I will see the following code snippets in `../src/main.js`.
 
 ```
 import { createApp } from 'vue'
@@ -121,7 +121,7 @@ According to the API docs, one can know these infos.
 
 + `createApp` function is a function that create a component as an App. The component will hold the whole web page by default.
 
-+ `mount` function indicates what style will be used. Here, it will use style named `#app`
++ `mount` function indicates what style will be used. Here, it will use style named `#app` in `<div class ="#app">`
 
 > ![TIP]
 > Recall about css knowledge.
@@ -134,12 +134,117 @@ According to the API docs, one can know these infos.
 > 
 > For more details, see [style in `CSS`](https://www.w3schools.com/html/html_css.asp) 
 
-#### reference
-##### guide reference
-See [`Overview of Vue-cli (official docs)`](https://cli.vuejs.org/guide/)
+Next, let's take a glance at definition of `App` in `../src/App.vue`.
 
-### currently latest version of vue-cli + vite
-> [!WARNING]
+You will see these full code in `../src/App.vue`
+
+```
+<template>
+  <div class ="#app">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> 
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+```
+
+Here, there are a few code snippets that's worth to explain it.
+
++ The following code snippets.
+
+```
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+```
+
+gives info about the app then export it, including these info  
+  
+  - a App's name: says at `name` field. Here is `App`.
+  - used components in this file: says at `components` field. Here `HelloWorld` will be used.
+
++ The following code snippets. 
+
+```
+<template>
+  <div class ="#app">
+    <HelloWorld msg="Welcome to Your Vue.js App"/> 
+  </div>
+</template>
+```
+
+Here is a template that the will be used at `createApp(App)` function call in `../src/main.js` file. 
+
+The server will run the template and display output on web page.
+
+> [!NOTE]
+> `<HelloWorld>` component is defined in `./components/HelloWorld.vue`.
+>
+> You will know it at `import HelloWorld from './components/HelloWorld.vue'` between`<script>` and </script> tag in this file. 
+
+> [!TIP]
+> If you are familiar with `ReactJS`, you will quick know that
+> 
+> - `<HelloWorld>` is a component in `<HelloWorld msg="Welcome to Your Vue.js App"/>`
+>   
+> - And, the `<HelloWorld>` component is used with argument `msg` that is passed with value `"Welcome to Your Vue.js App"`.
+
++ The following code snippets.
+
+```
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+```
+
+defines the css style named `#app`.
+
+> [!NOTE]
+> It will be used in `<div>` tag at `<div class ="#app">` and which will be mounted in the `mount` method call at `createApp(App).mount('#app')` at `../src/main.js`
+>
+
+##### summary
+I summarize the execution of an server of vue project into several diagrams.
+
+The server -> `../src/main`
+
+### currently latest version of Vue + Vite
+
+> [!NOTE]
 > Here is the guide for currently latest version (NOT stable) matched with vite, the approach may probably change in the future release, for more details, see [Vue-cli (official docs)](https://cli.vuejs.org/)
 
 #### installation and create a new project
@@ -156,6 +261,8 @@ npm create vue@latest
 
 ##### demo
 See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
+
+#### modify the code of vue project
 
 #### reference
 ##### guide reference
