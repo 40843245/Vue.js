@@ -153,5 +153,4 @@ See [`How to create a new project with Vue + Vite in command prompt in Windows 1
 
 #### reference
 ##### guide reference
-
-See [``](https://vuejs.org/guide/scaling-up/tooling.html#project-scaffolding)
+See [`Tooling#Vite (official docs)`](https://vuejs.org/guide/scaling-up/tooling.html#vite)
