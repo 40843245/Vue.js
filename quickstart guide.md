@@ -47,8 +47,15 @@ cd <your-project-name>
 5. To run the server, type these commands in command prompt.
 
 ```
-npm run server
+npm run serve
 ```
+
+> [!NOTE]
+> NOTICE that do **NOT** type these commands.
+>
+> ```
+> npm run server
+> ```
 
 6. Then it will compile and build the whole project then running the server. Should look like this if the server runs successfully.
 
@@ -73,7 +80,7 @@ I select the first option (`Vue3`)
 3. Then, in command prompt, type
 
 ```
-npm run server
+npm run serve
 ```
 
 4. Then it will compile and build the whole project then running the server. Should look like this if the server runs successfully.
@@ -121,3 +128,30 @@ According to the API docs, one can know these infos.
 > 
 > For more details, see [style in `CSS`](https://www.w3schools.com/html/html_css.asp) 
 
+#### reference
+##### guide reference
+See [`Overview of Vue-cli (official docs)`](https://cli.vuejs.org/guide/)
+
+### currently latest version of vue-cli + vite
+> [!WARNING]
+> Here is the guide for currently latest version (NOT stable) matched with vite, the approach may probably change in the future release, for more details, see [Vue-cli (official docs)](https://cli.vuejs.org/)
+
+#### installation and create a new project
+To install the latest version of vue-cli and vite (if it has NOT been installed yet) and create a new project, do the following steps.
+
+1. In command prompt, type these commands.
+
+```
+npm create vue@latest
+```
+
+> [!NOTE]
+> You can install it without npm command, but with other command, for more info, see [installation guide of vue-cli (official docs)](https://cli.vuejs.org/guide/)
+
+#### demo
+See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
+
+#### reference
+##### guide reference
+
+See [``](https://vuejs.org/guide/scaling-up/tooling.html#project-scaffolding)
