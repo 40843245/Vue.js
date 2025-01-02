@@ -151,7 +151,7 @@ According to the API docs, one can know these infos.
 
 + `mount` function indicates what style will be used. Here, it will use style named `#app` in `<div class ="#app">`
 
-> ![TIP]
+> [!TIP]
 > Recall about css knowledge.
 >
 > css can be categorized by `class` attr, `id` attr and the html tag itself.
