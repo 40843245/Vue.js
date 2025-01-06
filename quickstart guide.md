@@ -1,4 +1,4 @@
-# Vue.js
+# Vue2.js
 ## quickstart guide
 There are lots of different ways to run .vue or vue project.
 
