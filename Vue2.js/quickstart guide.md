@@ -1,12 +1,11 @@
 # Vue2.js
 ## quickstart guide
-There are lots of different ways to run .vue or vue project.
+There are lots of different ways to run .vue or vue project (vue2 version).
 
 Here, I will only discuss three ways:
 
 + embed vue plugin (development version) in `.html` file.
-+ create a vue project with currently latest stable version of vue-cli.
-+ create a vue project with currently latest version of Vue + Vite.
++ create a vue project with currently latest stable version of vue-cli..
 
 ### embed vue plugin (development version) in `.html` file
 To embed vue plugin (development version) in `.html` file, one just have to add `https://cdn.jsdelivr.net/npm/vue/dist/vue.js` in `<head>` tag
