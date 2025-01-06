@@ -366,26 +366,3 @@ I summarize the execution of an server of vue project into several diagrams.
 [`workflow 1 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%201%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
 
 [`workflow 2 of vue project with @vue_cli command in command prompt.jpg`](https://github.com/40843245/Vue.js/blob/main/attachment/figure/workflow%202%20of%20vue%20project%20with%20%40vue_cli%20command%20in%20command%20prompt.jpg)
-### create a vue project with currently latest version of Vue + Vite
-
-> [!NOTE]
-> Here is the guide for currently latest version (NOT stable) matched with vite, the approach may probably change in the future release, for more details, see [Vue-cli (official docs)](https://cli.vuejs.org/)
-
-#### installation and create a new project
-To install the latest version of vue-cli and vite (if it has NOT been installed yet) and create a new project, do the following steps.
-
-1. In command prompt, type these commands.
-
-```
-npm create vue@latest
-```
-
-> [!NOTE]
-> You can install it without npm command, but with other command, for more info, see [installation guide of vue-cli (official docs)](https://cli.vuejs.org/guide/)
-
-##### demo
-See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
-
-#### reference
-##### guide reference
-See [`Tooling#Vite (official docs)`](https://vuejs.org/guide/scaling-up/tooling.html#vite)
