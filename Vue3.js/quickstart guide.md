@@ -65,6 +65,22 @@ npm run dev
 ##### demo
 See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
 
+#### modify code
+
+It is easier to modify the code than Vue2.
+
+It is clearer to define a new template in `.vue` file and use it. 
+
++ compose the UI on web page.
+  
+The Vue will build `.../src/App.vue` and run it, displaying output on UI on web page.
+
+So, to compose the UI on web page, you just have to import components in `.../src/App.vue`, then compose components in `<template>` tag in `.../src/App.vue`.
+
++ change style of components
+
+To change style of components, you just have to add style `<style>` tag in `.../src/App.vue`.
+
 #### reference
 ##### guide reference
 See [`Tooling#Vite (official docs)`](https://vuejs.org/guide/scaling-up/tooling.html#vite)
