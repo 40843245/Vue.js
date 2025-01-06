@@ -30,6 +30,9 @@ npm create vue@latest
 
 2. Then it will ask you project name. Fill it.
 3. Additionally, it will also ask you some questions, answer these questions.
+
+<img width="851" alt="image" src="https://github.com/user-attachments/assets/c0edb037-2117-4812-9936-6d8dc23961bf" />
+
 4. Then you will create a new project.
 5. Then change directory to your project name, to do so, type these commands.
 
