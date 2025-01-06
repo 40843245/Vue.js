@@ -67,6 +67,9 @@ See [`How to create a new project with Vue + Vite in command prompt in Windows 1
 
 #### modify code
 
+> [!NOTE]
+> I assume you are familiar with composing components with `HTML`, `CSS`.
+
 It is easier to modify the code than Vue2.
 
 It is clearer to define a new template in `.vue` file and use it. 
@@ -83,6 +86,13 @@ To change style of components, you just have to add style `<style>` tag in `.../
 
 > [!NOTE]
 > In Vue3, there can exist at most `<template>` tag in a `.vue` file (the rule starts at Vue2)
+
+> [!TIP]
+> To apply the style only in this file, define style in a `<style>` tag whose has attribute `scoped` (i.e. define style in `<style scoped>`)
+>
+> To apply the style for all files in this project, define style in `<style>`.
+
+See `<style scoped>` tag of full code for fully understanding.
 
 > [!NOTE]
 > In Vue3, there can exist at most `<script>` tag in a `.vue` file (the rule starts at Vue2).
