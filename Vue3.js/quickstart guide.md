@@ -44,9 +44,23 @@ npm install
 ```
 
 > [!NOTE]
-> Be patient. It will take a few minutes.
+> Be patient. It will take a few minutes, since there are lots of package needed to install.
 
+7. Then type these commands.
 
+```
+npm run format
+```
+
+8. Finally, type these commands.
+
+```
+npm run dev
+```
+
+9. Then you will see a connection with url in terminal. Click it to visit the url to connect the server.
+
+<img width="848" alt="image" src="https://github.com/user-attachments/assets/98977365-852a-4ab9-9fcf-94101e8ddab9" />
 
 ##### demo
 See [`How to create a new project with Vue + Vite in command prompt in Windows 11?`](https://youtu.be/b6k_sMTSw7E)
